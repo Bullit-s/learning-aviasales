@@ -1,10 +1,10 @@
 import React from 'react';
 import {Button} from "antd";
 
-function App() {
+export const App =() =>{
   return (
 <Button type={"primary"}>asf</Button>
   );
 }
 
-export default App;
+
