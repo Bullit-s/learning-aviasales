@@ -13,6 +13,7 @@
     "@types/react-dom": "^16.9.8",
     "antd": "^4.10.0",
     "craco-less": "^1.17.1",
+    "firebase": "^8.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
@@ -22,7 +23,8 @@
   },
   "scripts": {
     "start": "nodemon -w craco.config.js -w src/assets/styles/theme/antd-theme.less --exec \"craco start\"",
-    "build": "craco build"
+    "build": "craco build",
+    "deploy": "npm run build && firebase deploy --only hosting:learning-aviasales"
   },
   "eslintConfig": {
     "extends": [

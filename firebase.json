@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "build",
+    "site": "learning-aviasales",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
