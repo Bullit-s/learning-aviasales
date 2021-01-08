@@ -36,23 +36,23 @@ const filterTickets = (filter: FilterValues, tickets: Array<Ticket>) => {
       }
       if (
         oneTransplant &&
-        item.segments[0]?.stops.length < 2 &&
-        item.segments[1]?.stops.length < 2
+        item.segments[0]?.stops.length == 1 &&
+        item.segments[1]?.stops.length == 1
       ) {
         return true;
       }
       if (
         twoTransplants &&
-        item.segments[0]?.stops.length < 3 &&
-        item.segments[1]?.stops.length < 3
+        item.segments[0]?.stops.length == 2 &&
+        item.segments[1]?.stops.length == 2
       ) {
         return true;
       }
 
       return !!(
         threeTransfers &&
-        item.segments[0]?.stops.length < 4 &&
-        item.segments[1]?.stops.length < 4
+        item.segments[0]?.stops.length === 3 &&
+        item.segments[1]?.stops.length === 3
       );
     });
   } else {
@@ -63,7 +63,7 @@ const filterTickets = (filter: FilterValues, tickets: Array<Ticket>) => {
 export const ticketsSelector = ({ tickets }: RootState) => {
   let tempData = [...tickets.data];
 
-  if (tempData.length) {
+  if (tickets.sort && tempData.length) {
     tempData = sortTickets(tickets.sort, tempData);
   }
 

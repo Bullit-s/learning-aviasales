@@ -24,20 +24,25 @@ const Layout = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 24px;
+
   @media screen and ${deviceSize.tablet} {
     padding: 50px;
   }
 `;
 
-const Logo = styled.img``;
+const Logo = styled.img`
+  margin-bottom: 50px;
+`;
+
 const ContentWrapper = styled.div`
   display: grid;
-  grid-template-columns: 230px 1fr;
+  grid-template-columns: 1fr;
   width: 100%;
   grid-gap: 12px;
   max-width: 750px;
 
   @media screen and ${deviceSize.tablet} {
+    grid-template-columns: 230px 1fr;
     grid-gap: 20px;
   }
 `;

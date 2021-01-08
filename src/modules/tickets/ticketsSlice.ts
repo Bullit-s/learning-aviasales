@@ -17,8 +17,8 @@ interface TicketsState {
   data: Array<Ticket>;
   loading: Loading;
   filter: FilterValues;
-  sort: SortTicket;
   stop: boolean;
+  sort?: SortTicket;
   searchId?: string;
   error?: string | null;
 }
@@ -26,7 +26,7 @@ interface TicketsState {
 const initialState: TicketsState = {
   data: [],
   filter: {},
-  sort: "cheap",
+  // sort: "cheap",
   stop: false,
   loading: "idle",
 };
@@ -37,6 +37,9 @@ const ticketsSlice = createSlice({
   reducers: {
     setFilter(state, action: { payload: FilterValues }) {
       state.filter = action.payload;
+    },
+    setSorting(state, action: { payload: SortTicket | undefined }) {
+      state.sort = action.payload;
     },
   },
   extraReducers: (builder) => {

@@ -42,6 +42,11 @@ const Block = styled.div`
   border-radius: 5px;
   background: #ffffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  > .ant-checkbox-wrapper,
+  .ant-checkbox-group > .ant-checkbox-wrapper {
+    margin-bottom: 10px;
+  }
 `;
 
 const Title = styled.div`

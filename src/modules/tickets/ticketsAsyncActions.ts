@@ -1,6 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { getSearchId } from "../../api/getSearchId";
-import { Ticket } from "../../api/dto/Ticket";
 import { getTickets, TicketsResponse } from "../../api/getTickets";
 
 export const fetchSearchId = createAsyncThunk(
