@@ -1,10 +1,6 @@
-import React from 'react';
-import {Button} from "antd";
+import React, { FC } from "react";
+import { TicketsPage } from "./modules/tickets/pages/TicketsPage";
 
-export const App =() =>{
-  return (
-<Button type={"primary"}>asf</Button>
-  );
-}
-
-
+export const App: FC = () => {
+  return <TicketsPage />;
+};

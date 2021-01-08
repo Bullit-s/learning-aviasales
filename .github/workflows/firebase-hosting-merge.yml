@@ -17,6 +17,6 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_LEARNING_AVIASALES }}'
           channelId: live
-          projectId: learning-aviasales
+          projectId: learning-tickets
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
