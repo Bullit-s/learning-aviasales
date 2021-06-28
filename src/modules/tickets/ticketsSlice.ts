@@ -21,6 +21,7 @@ interface TicketsState {
   sort?: SortTicket;
   searchId?: string;
   error?: string | null;
+  search: string;
 }
 
 const initialState: TicketsState = {
@@ -29,6 +30,7 @@ const initialState: TicketsState = {
   // sort: "cheap",
   stop: false,
   loading: "idle",
+  search: "",
 };
 
 const ticketsSlice = createSlice({
@@ -40,6 +42,9 @@ const ticketsSlice = createSlice({
     },
     setSorting(state, action: { payload: SortTicket | undefined }) {
       state.sort = action.payload;
+    },
+    setSearch(state, action: { payload: string }) {
+      state.search = action.payload;
     },
   },
   extraReducers: (builder) => {

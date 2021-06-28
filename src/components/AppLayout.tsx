@@ -10,7 +10,8 @@ interface Props {
 export const AppLayout: FC<Props> = ({ sidebar, children }) => {
   return (
     <Layout>
-      <Logo src={ImageLogo} alt={"logo"} />
+      <img src={ImageLogo} alt={"logo"} />
+      <Title>Поиск авиабилетов</Title>
       <ContentWrapper>
         <Sidebar>{sidebar}</Sidebar>
         <Content>{children}</Content>
@@ -30,7 +31,10 @@ const Layout = styled.div`
   }
 `;
 
-const Logo = styled.img`
+const Title = styled.h1`
+  color: #859bad;
+  font-size: 17px;
+  font-weight: 600;
   margin-bottom: 50px;
 `;
 
@@ -39,10 +43,10 @@ const ContentWrapper = styled.div`
   grid-template-columns: 1fr;
   width: 100%;
   grid-gap: 12px;
-  max-width: 750px;
+  max-width: 1050px;
 
   @media screen and ${deviceSize.tablet} {
-    grid-template-columns: 230px 1fr;
+    grid-template-columns: 330px 1fr;
     grid-gap: 20px;
   }
 `;

@@ -8,6 +8,10 @@ import { TicketsFilter } from "../components/TicketsFilter";
 import { ticketsSelector } from "../ticketsSelectors";
 import { TicketsSort } from "../components/TicketsSort";
 import { TicketList } from "../components/TicketList";
+import { Spin } from "antd";
+import styled from "styled-components";
+import { TicketsSearch } from "../components/TicketsSearch";
+import { useDebounceValue } from "../../../core/hooks/useDebounceValue";
 
 export const filterOptions: Array<{
   label: string;
@@ -34,9 +38,16 @@ export const filterOptions: Array<{
 export const TicketsPage = () => {
   const [filterForm] = useForm();
   const dispatch = useDispatch();
-  const { searchId, data: ticketList, filter, sort: activeSort } = useSelector(
-    ticketsSelector
-  );
+  const [search, setSearch] = useState("");
+  const debounceSearch = useDebounceValue<string>(search, 750, "");
+
+  const {
+    searchId,
+    data: ticketList,
+    filter,
+    sort: activeSort,
+    loading,
+  } = useSelector(ticketsSelector);
   const [allChecked, setAllChecked] = useState(true);
 
   const [checkedList, setCheckedList] = React.useState<
@@ -85,6 +96,17 @@ export const TicketsPage = () => {
     }
   };
 
+  useEffect(() => {
+    if (debounceSearch === undefined) {
+      return;
+    }
+
+    dispatch(ticketsActions.setSearch(debounceSearch));
+  }, [debounceSearch]);
+
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setSearch(e.target.value);
+
   return (
     <AppLayout
       sidebar={
@@ -99,7 +121,22 @@ export const TicketsPage = () => {
       }
     >
       <TicketsSort sort={activeSort} onSort={handleSortTickets} />
-      <TicketList tickets={ticketList} />
+      <TicketsSearch onChange={handleSearch} value={search} />
+      {loading !== "idle" ? (
+        <SpinWrapper>
+          <Spin size="large" />
+        </SpinWrapper>
+      ) : (
+        <TicketList tickets={ticketList} />
+      )}
     </AppLayout>
   );
 };
+
+const SpinWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 150px;
+`;

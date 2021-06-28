@@ -7,6 +7,7 @@ import {
   getTimeByDuration,
 } from "../../../core/helpers/dateHelpers";
 import { priceFormatter } from "../../../core/helpers/numberFormatters";
+import { aviaCodes, Codes } from "../../../core/helpers/aviaCodes";
 
 interface Props {
   ticket: Ticket;
@@ -23,7 +24,7 @@ export const TicketItem = ({ ticket }: Props) => {
         <Fragment key={origin + destination}>
           <ContentItem>
             <ContentItemTitle>
-              {origin} - {destination}
+              {aviaCodes(origin as Codes)} - {aviaCodes(destination as Codes)}
             </ContentItemTitle>
             <ContentItemValue>
               {`${getTime(date)} - ${getTimeByDuration(date, duration)}`}
@@ -39,7 +40,9 @@ export const TicketItem = ({ ticket }: Props) => {
             </ContentItemTitle>
             <ContentItemValue>
               {stops.map((stop, index) =>
-                index === stops.length - 1 ? stop : `${stop}, `
+                index === stops.length - 1
+                  ? aviaCodes(stop as Codes)
+                  : `${aviaCodes(stop as Codes)}, `
               )}
             </ContentItemValue>
           </ContentItem>
@@ -51,7 +54,7 @@ export const TicketItem = ({ ticket }: Props) => {
 
 const TicketBlock = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 0.8fr 0.5fr 1fr;
   grid-gap: 20px;
   padding: 26px 20px;
   margin-bottom: 20px;

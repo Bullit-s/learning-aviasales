@@ -15,6 +15,7 @@
     "antd": "^4.10.0",
     "craco-less": "^1.17.1",
     "firebase": "^8.2.1",
+    "lodash": "^4.17.21",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
@@ -47,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.170",
     "@types/react-redux": "^7.1.15",
     "@types/styled-components": "^5.1.7",
     "@types/webpack-env": "^1.16.0",
