@@ -121,7 +121,12 @@ export const TicketsPage = () => {
       }
     >
       <TicketsSort sort={activeSort} onSort={handleSortTickets} />
-      <TicketsSearch onChange={handleSearch} value={search} />
+      <TicketsSearch
+        onChange={handleSearch}
+        value={search}
+        count={ticketList.length}
+        isLoading={loading !== "idle"}
+      />
       {loading !== "idle" ? (
         <SpinWrapper>
           <Spin size="large" />

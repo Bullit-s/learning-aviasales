@@ -72,6 +72,9 @@ const searchTickets = (search: string, tickets: Array<Ticket>) => {
         (item) =>
           aviaCodes(item.origin as Codes)
             .toLocaleLowerCase()
+            .indexOf(search.toLocaleLowerCase()) !== -1 ||
+          item.origin
+            .toLocaleLowerCase()
             .indexOf(search.toLocaleLowerCase()) !== -1
       )
     ) {
@@ -82,6 +85,9 @@ const searchTickets = (search: string, tickets: Array<Ticket>) => {
       ticket.segments.some(
         (item) =>
           aviaCodes(item.destination as Codes)
+            .toLocaleLowerCase()
+            .indexOf(search.toLocaleLowerCase()) !== -1 ||
+          item.destination
             .toLocaleLowerCase()
             .indexOf(search.toLocaleLowerCase()) !== -1
       )
@@ -94,7 +100,8 @@ const searchTickets = (search: string, tickets: Array<Ticket>) => {
         (stop) =>
           aviaCodes(stop as Codes)
             .toLocaleLowerCase()
-            .indexOf(search.toLocaleLowerCase()) !== -1
+            .indexOf(search.toLocaleLowerCase()) !== -1 ||
+          stop.toLocaleLowerCase().indexOf(search.toLocaleLowerCase()) !== -1
       )
     );
   });

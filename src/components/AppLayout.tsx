@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from "react";
 import styled from "styled-components";
 import { deviceSize } from "../assets/styles/theme/deviceSize";
-import ImageLogo from "../assets/images/logo.png";
+import { ReactComponent as ImageLogo } from "../assets/images/plane.svg";
 
 interface Props {
   sidebar: ReactNode;
@@ -10,7 +10,9 @@ interface Props {
 export const AppLayout: FC<Props> = ({ sidebar, children }) => {
   return (
     <Layout>
-      <img src={ImageLogo} alt={"logo"} />
+      <LogoWrapper>
+        <ImageLogo />
+      </LogoWrapper>
       <Title>Поиск авиабилетов</Title>
       <ContentWrapper>
         <Sidebar>{sidebar}</Sidebar>
@@ -26,16 +28,16 @@ const Layout = styled.div`
   align-items: center;
   padding: 24px;
 
-  @media screen and ${deviceSize.tablet} {
+  @media screen and ${deviceSize.laptop} {
     padding: 50px;
   }
 `;
 
 const Title = styled.h1`
-  color: #359fa1;
+  color: #09b487;
   font-size: 17px;
   font-weight: 600;
-  margin-bottom: 50px;
+  margin: 25px 0;
 `;
 
 const ContentWrapper = styled.div`
@@ -43,13 +45,19 @@ const ContentWrapper = styled.div`
   grid-template-columns: 1fr;
   width: 100%;
   grid-gap: 12px;
-  max-width: 1050px;
+  max-width: 960px;
 
-  @media screen and ${deviceSize.tablet} {
-    grid-template-columns: 330px 1fr;
+  @media screen and ${deviceSize.laptop} {
+    grid-template-columns: 240px 1fr;
     grid-gap: 20px;
   }
 `;
 
 const Sidebar = styled.div``;
 const Content = styled.div``;
+
+const LogoWrapper = styled.div`
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+`;

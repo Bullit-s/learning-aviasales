@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef26ab89-8f6b-44cb-bd49-501bef7491d8" name="Default Changelist" comment="Add search">
-      <change afterPath="$PROJECT_DIR$/src/assets/images/empty-gif.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/plane.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/ant-components.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/ant-components.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/styles/theme/antd-theme.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/theme/antd-theme.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AppLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/tickets/components/TicketItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/tickets/components/TicketItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/tickets/components/TicketList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/tickets/components/TicketList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/tickets/components/TicketsSearch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/tickets/components/TicketsSearch.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/tickets/pages/TicketsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/tickets/pages/TicketsPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/tickets/ticketsSelectors.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/tickets/ticketsSelectors.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
