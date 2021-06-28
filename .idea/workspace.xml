@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef26ab89-8f6b-44cb-bd49-501bef7491d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/core/helpers/aviaCodes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/hooks/useDebounceValue.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/tickets/components/TicketsSearch.tsx" afterDir="false" />
+    <list default="true" id="ef26ab89-8f6b-44cb-bd49-501bef7491d8" name="Default Changelist" comment="Add search">
+      <change afterPath="$PROJECT_DIR$/src/assets/images/empty-gif.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/theme/antd-theme.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/theme/antd-theme.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AppLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/tickets/components/TicketItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/tickets/components/TicketItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/tickets/pages/TicketsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/tickets/pages/TicketsPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/tickets/ticketsSelectors.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/tickets/ticketsSelectors.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/tickets/ticketsSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/tickets/ticketsSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/tickets/components/TicketList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/tickets/components/TicketList.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +39,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/core/helpers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
@@ -51,18 +47,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/images" />
+      <recent name="F:\Учеба\React app My\learning-aviasales\src\core\helpers" />
+      <recent name="F:\Учеба\React app My\learning-aviasales" />
+      <recent name="F:\Учеба\React app My\learning-aviasales\src\assets\styles\theme" />
+      <recent name="F:\Учеба\React app My\learning-aviasales\src\assets\styles" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\Учеба\React app My\learning-aviasales\src\assets\styles\fonts\OpenSans" />
       <recent name="F:\Учеба\React app My\learning-aviasales\src\assets\images" />
       <recent name="F:\Учеба\React app My\learning-aviasales\src\api\dto" />
       <recent name="F:\Учеба\React app My\learning-aviasales\src\api\dto\tickets" />
       <recent name="F:\Учеба\React app My\learning-aviasales" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\Учеба\React app My\learning-aviasales\src\core\helpers" />
-      <recent name="F:\Учеба\React app My\learning-aviasales" />
-      <recent name="F:\Учеба\React app My\learning-aviasales\src\assets\styles\theme" />
-      <recent name="F:\Учеба\React app My\learning-aviasales\src\assets\styles" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
@@ -103,8 +100,16 @@
       <workItem from="1610024185824" duration="4982000" />
       <workItem from="1610029769177" duration="348000" />
       <workItem from="1610030131252" duration="25405000" />
-      <workItem from="1624889178601" duration="3423000" />
+      <workItem from="1624889178601" duration="4513000" />
     </task>
+    <task id="LOCAL-00001" summary="Add search">
+      <created>1624893771732</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1624893771732</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,6 +125,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add search" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add search" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

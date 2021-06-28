@@ -32,7 +32,7 @@ const Layout = styled.div`
 `;
 
 const Title = styled.h1`
-  color: #859bad;
+  color: #359fa1;
   font-size: 17px;
   font-weight: 600;
   margin-bottom: 50px;
